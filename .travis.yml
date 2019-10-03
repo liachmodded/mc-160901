@@ -19,7 +19,7 @@ jobs:
     script: "./gradlew build -S -i"
   - stage: deploy
     install: true
-    script: "./gradlew javadocs build bintrayUpload publish -S -i"
+    script: "./gradlew javadocs build bintrayUpload -S -i"
     deploy:
       - provider: pages
         github_token: "$GITHUB_OAUTH_TOKEN"
@@ -40,7 +40,7 @@ jobs:
 stages:
 - build
 - name: deploy
-  if: repo = liachmodded/carttemplate AND env(bintray_key) AND env(GITHUB_OAUTH_TOKEN)
+  if: repo = liachmodded/mc-160901 AND env(bintray_key) AND env(GITHUB_OAUTH_TOKEN)
 env:
   global:
   - TERM=dumb

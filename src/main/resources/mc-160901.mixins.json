@@ -1,10 +1,11 @@
 {
   "required": true,
-  "package": "",
+  "package": "com.github.liachmodded.mc160901.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
   ],
   "client": [
+    "ClientMixin"
   ],
   "injectors": {
     "defaultRequire": 1
